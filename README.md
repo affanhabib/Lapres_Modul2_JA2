@@ -5,7 +5,7 @@ Soal Shift Modul 2 dapat dilihat [disini](Soal/Soal%20Shift%20Modul%202.pdf). Da
 
 1. Langkah pertama kami menjalankan UML seperti pada [modul](https://github.com/afrchmdi/Jarkom-Modul-Pengenalan-UML).
 2. Kemudian, masih mengikuti modul, membuat topologi sesuai permintaan soal. `nano topologi.sh`
-![topologi](Gambar/Topologi.png)
+![topologi](/Gambar/topologi.png)
 
 ```shell
 # Switch
@@ -107,7 +107,7 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **kanto.a3.com**
 		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
 	- Untuk menjawab soal 1, 2, 3, dan 6 isi *file* **kanto.a3.com** sebagai berikut
-		![domain](Gambar/kanto.png)
+		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
 	- 
 6. 
