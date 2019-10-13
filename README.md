@@ -110,12 +110,12 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
 	- Kemudian *setting* **nameserver** pada *client* (*Psyduck* dan *Snorlax*) dengan mengedit `nano /etc/resolv.conf`
-	![setting name server pada client](/Gambar/nameserver.PNG)
+		![setting name server pada client](/Gambar/nameserver.PNG)
 	- Untuk mengetes koneksi dengan `ping kanto.a3.com`
 	- Menjawab soal nomor 4 dengan *Reverse DNS*
 	- Pada *Articuno* edit `nano /etc/bind/named.conf.local`
 	- Lalu tambahkan seperti gambar dibawah
-	![Reverse DNS](/Gambar/reverse.PNG)
+		![Reverse DNS](/Gambar/reverse.PNG)
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **73.151.10.in-addr.arpa**
 	`cp /etc/bind/db.local /etc/bind/kanto/73.151.10.in-addr.arpa`
 	- Edit seperti gambar
