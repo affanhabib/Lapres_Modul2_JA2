@@ -94,8 +94,9 @@ gateway 192.168.0.1
 ```
 Restart network dengan `service networking restart` atau `/etc/init.d/networking restart` di setiap UML.
 
-4. Kemudian lanjutkan sesuai dengan modul tersebut.
-5. Setelah itu ke [Modul DNS Server](https://github.com/ismail2803/Jarkom-modul-2-2019/blob/master/DNS/README.md). Jika mengikuti modul ini maka akan dapat menjawab soal nomor 1-7.
+4. Kemudian kami lanjutkan sesuai dengan modul tersebut.
+5. Setelah itu kami ke [Modul DNS Server](https://github.com/ismail2803/Jarkom-modul-2-2019/blob/master/DNS/README.md). Kami mengikuti modul ini untuk dapat menjawab soal nomor 1-7.
+	### Membuat Domain
 	- Pertama membuat domain. Pada *Articuno* isi `nano /etc/bind/named.conf.local`
 	- Konfigurasi domain **kanto.a3.com** seperti berikut
 	```shell
@@ -107,12 +108,14 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Buat folder **kanto** pada **/etc/bind/** dengan `mkdir /etc/bind/jarkom`
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **kanto.a3.com**
 		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
-	- Untuk menjawab soal 1, 2, 3, dan 6 isi *file* **kanto.a3.com** sebagai berikut
+	- Isi *file* **kanto.a3.com** sebagai berikut
 		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
+	### Setting Name Server
 	- Kemudian *setting* **nameserver** pada *client* (*Psyduck* dan *Snorlax*) dengan mengedit `nano /etc/resolv.conf`
 		![setting name server pada client](/Gambar/nameserver.PNG)
 	- Untuk mengetes koneksi dengan `ping kanto.a3.com`
+	### Reverse DNS
 	- Menjawab soal nomor 4 dengan *Reverse DNS*
 	- Pada *Articuno* edit `nano /etc/bind/named.conf.local`
 	- Lalu tambahkan seperti gambar dibawah
@@ -124,6 +127,19 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 		
 		![Reverse DNS](/Gambar/reverse2.PNG)
 	- Kemudian restart `service bind9 restart`
+	### Record CNAME
+	- Record CNAME digunakan untuk menjawab soal nomor 2. Seperti gambar dibawah
+		![CNAME](/Gambar/kanto.PNG) 
+	- Kemudian restart *bind9* `service bind9 restart`
+	### DNS Slave
+	-  Menjawab soal nomor5, edit *file* **/etc/bind/named.conf.local** seperti dibawah
+	![DNS Slave](/Gambar/slave.PNG)
+	- Restart *bind9* `service bind9 restart`
+	- Lalu konfigurasi pada *Moltres*, edit *file* **/etc/bind/named.conf.local** seperti dibawah
+	![DNS Slave](/Gambar/slave2.PNG)
+	- Restart *bind9* `service bind9 restart`
+	### Subdomain
+	- 
 	- 
 6. 
 7. 
