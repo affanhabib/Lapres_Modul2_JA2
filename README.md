@@ -110,7 +110,7 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
 	- Isi *file* **kanto.a3.com** sebagai berikut
 	
-	![domain](/Gambar/kanto.PNG)
+		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
 	### Setting Name Server
 	- Kemudian *setting* **nameserver** pada *client* (*Psyduck* dan *Snorlax*) dengan mengedit `nano /etc/resolv.conf`
@@ -150,13 +150,13 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 ![Directory](/Gambar/no11.PNG)
 9. Untuk nomor 12, edit `nano /etc/apache2/sites-available/pallet.kanto.a3.com` dengan *syntax* `ErrorLog /var/www/pallet.kanto.a3.com/errors/404.html`
 
-![Error](/Gambar/error.PNG)
+	![Error](/Gambar/error.PNG)
 
 11. Untuk nomor 14
 	- Kami menyalin **/etc/apache2/sites-available/default** ke **/etc/apache2/sites-available/vermilion.pewter.kanto.a3.com**
 	- Edit seperti gambar
 	
-	![Port](/Gambar/vermilion.PNG)
+		![Port](/Gambar/vermilion.PNG)
 	- Aktifkan konfigurasi `a2ensite jarkomtc.com`
 	- Restart *Apache* `service apache2 restart`
 	- Buat *directory* **/var/www/vermilion**
@@ -170,11 +170,11 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Buka `nano /etc/apache2/sites-available/vermilion.pewter.kanto.a3.com`
 	- Edit seperti gambar
 	
-	![vpn](/Gambar/vpn.PNG)
+		![vpn](/Gambar/vpn.PNG)
 	- Restart *Apache* `service apache2 restart`
 13. Nomor 17
 	- Buka `nano /etc/apache2/sites-available/default`
 	- Edit seperti gambar
 	
-	![IP](/Gambar/default.PNG)
+		![IP](/Gambar/default.PNG)
 	- Restart *Apache* `service apache2 restart`
