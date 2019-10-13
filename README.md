@@ -94,4 +94,21 @@ gateway 192.168.0.1
 Restart network dengan `service networking restart` atau `/etc/init.d/networking restart` di setiap UML.
 
 4. Kemudian lanjutkan sesuai dengan modul tersebut.
-5.  
+5. Setelah itu ke [Modul DNS Server](https://github.com/ismail2803/Jarkom-modul-2-2019/blob/master/DNS/README.md). Jika mengikuti modul ini maka akan dapat menjawab soal nomor 1-7.
+	- Pertama membuat domain. Pada *Articuno* isi `nano /etc/bind/named.conf.local`
+	- Konfigurasi domain **kanto.a3.com** seperti berikut
+	```shell
+	zone "kanto.a3.com"{
+		type master;
+		file "/etc/bind/kanto/kanto.a3.com";
+	};
+	```
+	- Buat folder **kanto** pada **/etc/bind/** dengan `mkdir /etc/bind/jarkom`
+	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **kanto.a3.com**
+		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
+	- Untuk menjawab soal 1, 2, 3, dan 6 isi *file* **kanto.a3.com** sebagai berikut
+		![domain](Gambar/kanto.png)
+	- Restart *bind9* `service bind9 restart`
+	- 
+6. 
+7. 
