@@ -1,4 +1,5 @@
 
+
 # Laporan Resmi Praktikum Modul 2
 
 Soal Shift Modul 2 dapat dilihat [disini](Soal/Soal%20Shift%20Modul%202.pdf). Dalam laporan ini, kami ingin menjelaskan langkah-langkah yang kami gunakan untuk mengerjakan soal shift tersebut.
@@ -115,10 +116,12 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Menjawab soal nomor 4 dengan *Reverse DNS*
 	- Pada *Articuno* edit `nano /etc/bind/named.conf.local`
 	- Lalu tambahkan seperti gambar dibawah
+		
 		![Reverse DNS](/Gambar/reverse.PNG)
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **73.151.10.in-addr.arpa**
 	`cp /etc/bind/db.local /etc/bind/kanto/73.151.10.in-addr.arpa`
 	- Edit seperti gambar
+		
 		![Reverse DNS](/Gambar/reverse2.PNG)
 	- Kemudian restart `service bind9 restart`
 	- 
