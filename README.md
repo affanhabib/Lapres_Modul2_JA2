@@ -119,7 +119,7 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **73.151.10.in-addr.arpa**
 	`cp /etc/bind/db.local /etc/bind/kanto/73.151.10.in-addr.arpa`
 	- Edit seperti gambar
-	![Reverse DNS](/Gambar/reverse2.PNG)
+		![Reverse DNS](/Gambar/reverse2.PNG)
 	- Kemudian restart `service bind9 restart`
 	- 
 6. 
