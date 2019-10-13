@@ -148,6 +148,29 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 8. Menjawab nomor 11 dan 13, buka *file* **/etc/apache2/sites-available/pallet.kanto.a3.com**, edit seperti dibawah
 ![Directory](/Gambar/no11.PNG)
 9. Untuk nomor 12, edit `nano /etc/apache2/sites-available/pallet.kanto.a3.com` dengan *syntax* `ErrorLog /var/www/pallet.kanto.a3.com/errors/404.html`
+
 ![Error](/Gambar/error.PNG)
-10. 
-11. 
+
+11. Untuk nomor 14
+	- Kami menyalin **/etc/apache2/sites-available/default** ke **/etc/apache2/sites-available/vermilion.pewter.kanto.a3.com**
+	- Edit seperti gambar
+		![Port](/Gambar/vermilion.PNG)
+	- Aktifkan konfigurasi `a2ensite jarkomtc.com`
+	- Restart *Apache* `service apache2 restart`
+	- Buat *directory* **/var/www/vermilion**
+	- Isi `nano index.php` pada *directory* tersebut
+	```shell
+	<?php
+		echo "Halaman sedang dalam pembangunan";
+	?>
+	```
+12. Mengerjakan nomor 15
+	- Buka `nano /etc/apache2/sites-available/vermilion.pewter.kanto.a3.com`
+	- Edit seperti gambar
+	![vpn](/Gambar/vpn.PNG)
+	- Restart *Apache* `service apache2 restart`
+13. Nomor 17
+	- Buka `nano /etc/apache2/sites-available/default`
+	- Edit seperti gambar
+	![IP](/Gambar/default.PNG)
+	- Restart *Apache* `service apache2 restart`
