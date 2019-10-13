@@ -109,6 +109,7 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **kanto.a3.com**
 		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
 	- Isi *file* **kanto.a3.com** sebagai berikut
+		
 		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
 	### Setting Name Server
