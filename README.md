@@ -97,7 +97,7 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 4. Kemudian kami lanjutkan sesuai dengan modul tersebut.
 5. Setelah itu kami ke [Modul DNS Server](https://github.com/ismail2803/Jarkom-modul-2-2019/blob/master/DNS/README.md). Kami mengikuti modul ini untuk dapat menjawab soal nomor 1-7.
 	### Membuat Domain
-	- Pertama membuat domain. Pada *Articuno* isi `nano /etc/bind/named.conf.local`
+	- Menjawab nomor 1, membuat domain. Pada *Articuno* isi `nano /etc/bind/named.conf.local`
 	- Konfigurasi domain **kanto.a3.com** seperti berikut
 	```shell
 	zone "kanto.a3.com"{
@@ -109,7 +109,6 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	- Salin *file* **db.local** pada *directory* **/etc/bind/** ke folder **kanto** dengan nama *file* **kanto.a3.com**
 		`cp /etc/bind/db.local /etc/bind/kanto/kanto.a3.com`
 	- Isi *file* **kanto.a3.com** sebagai berikut
-		
 		![domain](/Gambar/kanto.PNG)
 	- Restart *bind9* `service bind9 restart`
 	### Setting Name Server
@@ -140,7 +139,15 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 	![DNS Slave](/Gambar/slave2.PNG)
 	- Restart *bind9* `service bind9 restart`
 	### Subdomain
+	- Menjawab nomor 3, edit `nano /etc/bind/kanto/kanto.a3.com` seperti dibawah
+	![Subdomain](/Gambar/kanto.PNG)
+	- Restart *bind9* `service bind9 restart`
 	- 
-	- 
-6. 
-7. 
+6. Nomor 8-15 tidak dapat menampilkan hasil karena tidak dapat membuka halaman dengan URL, namun bisa dengan mengakses IP
+7. Untuk menjawab soal nomor 8-17 mengacu pada [modul ini](https://github.com/ismail2803/Jarkom-modul-2-2019/tree/master/WebServer).
+8. Menjawab nomor 11 dan 13, buka *file* **/etc/apache2/sites-available/pallet.kanto.a3.com**, edit seperti dibawah
+![Directory](/Gambar/no11.PNG)
+9. Untuk nomor 12, edit `nano /etc/apache2/sites-available/pallet.kanto.a3.com` dengan *syntax* `ErrorLog /var/www/pallet.kanto.a3.com/errors/404.html`
+![Error](/Gambar/error.PNG)
+10. 
+11. 
