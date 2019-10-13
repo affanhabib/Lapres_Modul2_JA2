@@ -154,7 +154,8 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 11. Untuk nomor 14
 	- Kami menyalin **/etc/apache2/sites-available/default** ke **/etc/apache2/sites-available/vermilion.pewter.kanto.a3.com**
 	- Edit seperti gambar
-		![Port](/Gambar/vermilion.PNG)
+	
+	![Port](/Gambar/vermilion.PNG)
 	- Aktifkan konfigurasi `a2ensite jarkomtc.com`
 	- Restart *Apache* `service apache2 restart`
 	- Buat *directory* **/var/www/vermilion**
@@ -167,10 +168,12 @@ Restart network dengan `service networking restart` atau `/etc/init.d/networking
 12. Mengerjakan nomor 15
 	- Buka `nano /etc/apache2/sites-available/vermilion.pewter.kanto.a3.com`
 	- Edit seperti gambar
+	
 	![vpn](/Gambar/vpn.PNG)
 	- Restart *Apache* `service apache2 restart`
 13. Nomor 17
 	- Buka `nano /etc/apache2/sites-available/default`
 	- Edit seperti gambar
+	
 	![IP](/Gambar/default.PNG)
 	- Restart *Apache* `service apache2 restart`
